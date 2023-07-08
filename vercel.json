@@ -18,17 +18,10 @@
       ]
     }
   ],
-  // "rewrites": [
-  //   {
-  //     "source": "/api/(.*)",
-  //     "destination": "/api/proxy"
-  //   },
-  //   { "source": "/:path*", "destination": "/index.html" }
-  // ]
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "chatgpt-jiezi-tau.vercel.app"
+      "destination": "你的服务地址/$1"
     },
     { "source": "/:path*", "destination": "/index.html" }
   ]
