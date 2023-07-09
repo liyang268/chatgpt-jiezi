@@ -21,7 +21,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "你的服务地址/$1"
+      "destination": "/api/proxy"
     },
     { "source": "/:path*", "destination": "/index.html" }
   ]
