@@ -23,7 +23,7 @@ export default defineConfig((configEnv: ConfigEnv) => {
   // // eslint-disable-next-line no-console
   // console.log(JSON.parse(fs.readFileSync('vercel.json')))
 
-  const { VITE_PORT, VITE_PUBLIC_PATH } = viteEnv
+  const { VITE_PUBLIC_PATH } = viteEnv
   return {
     base: VITE_PUBLIC_PATH,
     resolve: {
@@ -35,8 +35,7 @@ export default defineConfig((configEnv: ConfigEnv) => {
     define: viteDefine,
     plugins: setupVitePlugins(viteEnv, isBuild),
     server: {
-      host: '0.0.0.0',
-      port: VITE_PORT,
+      host: 'https://chatgpt-jiezi-tau.vercel.app',
       open: false,
       proxy: {
         '/api': {
