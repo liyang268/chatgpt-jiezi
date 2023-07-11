@@ -1,27 +1,8 @@
 {
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "content-type"
-        },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "DELETE,PUT,POST,GET,OPTIONS"
-        }
-      ]
-    }
-  ],
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/api/proxy"
+      "destination": "https://1108-2409-8a00-1a52-b580-6451-ca31-3c5e-2ca8.ngrok-free.app/$1"
     },
     { "source": "/:path*", "destination": "/index.html" }
   ]
